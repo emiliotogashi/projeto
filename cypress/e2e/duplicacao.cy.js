@@ -15,6 +15,7 @@ describe('Codigo Duplicado', () => {
         .as('ProcuraCampo')
         .and('have.value','redux')
         .clear()
+        
     });
 
     const procurarpor=['frontend Testing','reactjs','vuejs']
