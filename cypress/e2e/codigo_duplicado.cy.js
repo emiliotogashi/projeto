@@ -15,7 +15,7 @@ describe('Codigo Duplicado', () => {
         .as('ProcuraCampo')
         .and('have.value','redux')
         .clear()
-        
+       
     });
 
     const procurarpor=['frontend Testing','reactjs','vuejs']
@@ -23,12 +23,31 @@ describe('Codigo Duplicado', () => {
         it(`Buscar por "${item}"`, () => {
             cy.search(item)
             cy.wait('@getStories')
-            
+           
             cy.get('.table-row')
                 .should('have.length',100)
-            
+           
         });
     })
 
-    
+      it.skip('Busca por  "reactjs"', () => {
+    cy.get('@searchField')
+      .type('reactjs{enter}')
+
+    cy.wait('@getStories')
+
+    cy.get('.table-row')
+      .should('have.length', 100)
+  })
+
+  it.skip('Busca por "vuejs"', () => {
+    cy.get('@searchField')
+      .type('vuejs{enter}')
+
+    cy.wait('@getStories')
+
+    cy.get('.table-row')
+      .should('have.length', 100)
+  })
+   
 });
