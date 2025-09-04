@@ -22,13 +22,20 @@ describe('Codigo Duplicado', () => {
     procurarpor.forEach(item=>{
         it(`Buscar por "${item}"`, () => {
             cy.search(item)
-            cy.wait('@getStories')
-           
-            cy.get('.table-row')
-                .should('have.length',100)
+          
+            cy.wait('@getStories').then(({response})=>{
+              const quantidade =response.body.hits.length
+
+              cy.get('.table-row')
+                .should('have.length',quantidade)
+   
+            })
+            
            
         });
     })
+
+       
 
       it.skip('Busca por mal uso "reactjs"', () => {
     cy.get('@searchField')
@@ -40,7 +47,7 @@ describe('Codigo Duplicado', () => {
       .should('have.length', 100)
   })
 
-        it.skip('Busca por mal uso  "reactjs"', () => {
+        it.skip('Busca por mal uso "reactjs"', () => {
     cy.get('@searchField')
       .type('reactjs{enter}')
 
