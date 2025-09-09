@@ -7,7 +7,7 @@ describe('Versionamento', () => {
     it('Nao usar enviar dados sensiveis', () => {
 
         cy.get('#email').type(Cypress.env('user_email'))
-        cy.get('#password').type(Cypress.env('user_senha'))
+        cy.get('#password').type(Cypress.env('user_senha'),{log:false})
         
     });
 });
