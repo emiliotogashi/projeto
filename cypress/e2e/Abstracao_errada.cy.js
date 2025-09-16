@@ -1,6 +1,6 @@
 ///
 
-// cypress/integration/testes.spec.js
+// cypress/e2e/testes.spec.js
 
 describe('Testes de Acesso e Validação de Páginas', () => {
 
