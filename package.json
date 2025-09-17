@@ -1,20 +1,12 @@
 {
-  "name": "boas-praticas",
+  "name": "automation-exercise-cypress",
   "version": "1.0.0",
-  "description": "Boas praticas minsait",
+  "description": "Test automation for automationexercise.com using Cypress",
   "scripts": {
     "test": "cypress run",
-    "cy:open": "cypress open"
+    "test:open": "cypress open"
   },
-  "keywords": [
-    "cypress.io",
-    "Capacitacao",
-    ""
-  ],
-  "author": "Alex",
-  "license": "MIT",
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0",
-    "cypress": "^12.8.1"
+    "cypress": "^13.0.0"
   }
 }
