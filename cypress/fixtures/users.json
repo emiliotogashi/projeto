@@ -1,0 +1,11 @@
+{
+  "newUser": {
+    "name": "Teste User",
+    "emailPrefix": "user_teste",
+    "password": "Senha123!"
+  },
+  "existingUser": {
+    "email": "existing_user@example.com",
+    "password": "Senha123!"
+  }
+}
