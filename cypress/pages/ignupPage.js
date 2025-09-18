@@ -2,7 +2,7 @@ import BasePage from './BasePage';
 
 class SignupPage extends BasePage {
   fillSignupName(name) {
-    cy.get('input[name="name"]').type(name);
+    cy.get('input[data-qa="signup-name"]').type(name);
   }
   
   fillSignupEmail(email) {

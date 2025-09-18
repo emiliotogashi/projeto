@@ -1,5 +1,5 @@
 import HomePage from '../pages/HomePage';
-import SignupPage from '../pages/SignupPage';
+import SignupPage from '../pages/ignupPage';
 import LoginPage from '../pages/LoginPage';
 import { v4 as uuidv4 } from 'uuid';
 import users from '../fixtures/users.json';

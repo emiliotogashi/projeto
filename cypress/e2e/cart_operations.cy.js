@@ -9,8 +9,9 @@ describe('Cart operations tests', () => {
     const products = new ProductsPage();
     const cart = new CartPage();
 
-    home.visit('/');
-    home.clickProducts();
+  home.visit('/');
+  cy.get('#products-section'); // Garante que o elemento está presente
+  home.clickProducts();
     products.selectProductByName(orderDetails.singleProductOrder.productName);
     products.addToCart();
 

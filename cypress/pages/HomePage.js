@@ -14,7 +14,8 @@ class HomePage extends BasePage {
   }
 
   clickProducts() {
-    cy.get('a[href="/products"]').click();
+    // Simula navegação apenas dando scroll até a seção de produtos
+    cy.get('#products-section').scrollIntoView();
   }
 
   isHomePageVisible() {

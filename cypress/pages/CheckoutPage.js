@@ -2,7 +2,7 @@ import BasePage from './BasePage';
 
 class CheckoutPage extends BasePage {
   fillAddressDetails({ name, address, city, state, zip, country, mobile }) {
-    cy.get('input[name="name"]').clear().type(name);
+    cy.get('input[name="checkout_name"]').clear().type(name);
     cy.get('input[name="address1"]').clear().type(address);
     cy.get('input[name="city"]').clear().type(city);
     cy.get('input[name="state"]').clear().type(state);

@@ -16,8 +16,9 @@ describe('Place order test', () => {
     const timestamp = Date.now();
     const uniqueEmail = `orderuser_${timestamp}@example.com`;
 
-    home.visit('/');
-    home.clickProducts();
+  home.visit('/');
+  cy.get('#products-section'); // Garante que o elemento está presente
+  home.clickProducts();
     products.selectProductByName(orderDetails.singleProductOrder.productName);
     products.addToCart();
     products.viewCart();
